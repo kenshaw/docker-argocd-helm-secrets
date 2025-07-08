@@ -43,6 +43,7 @@ $ ./build.sh
 
 Notes:
 
+- https://argo-cd.readthedocs.io/en/latest/user-guide/multiple_sources/
 - https://github.com/jkroepke/helm-secrets/wiki/ArgoCD-Integration
 - https://github.com/jkroepke/helm-secrets/wiki/ArgoCD-Integration#multi-source-application-support
 - https://github.com/argoproj/argo-cd/issues/11866
