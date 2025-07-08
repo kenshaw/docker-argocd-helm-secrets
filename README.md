@@ -6,6 +6,35 @@ See [here](https://github.com/jkroepke/helm-secrets/wiki/ArgoCD-Integration).
 
 ## Usage
 
+Use with the [ArgoCD `helm` Chart](https://artifacthub.io/packages/helm/argo/argo-cd):
+
+```sh
+# add argo repo
+$ helm repo add argo-cd https://argoproj.github.io/argo-helm
+
+# set up configuration
+$ cat > values.yaml << EOF
+repoServer:
+  image:
+    repository: docker.io/kenshaw/argocd-helm-secrets
+
+configs:
+  cm:
+    helm.valuesFileSchemes: >-
+      secrets+gpg-import, secrets+gpg-import-kubernetes,
+      secrets+age-import, secrets+age-import-kubernetes,
+      secrets, secrets+literal,
+      https
+EOF
+
+# install/upgrade chart
+$ helm upgrade \
+    --install \
+    --namespace argo-cd \
+    --values values.yaml \
+    argo-cd/argo-cd
+```
+
 ## Building
 
 ```sh
