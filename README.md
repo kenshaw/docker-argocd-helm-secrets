@@ -47,3 +47,4 @@ Notes:
 - https://github.com/jkroepke/helm-secrets/wiki/ArgoCD-Integration
 - https://github.com/jkroepke/helm-secrets/wiki/ArgoCD-Integration#multi-source-application-support
 - https://github.com/argoproj/argo-cd/issues/11866
+- https://github.com/jkroepke/helm-secrets/issues/475
