@@ -9,7 +9,7 @@ ARG \
   HELM_SECRETS_VERSION
 
 ENV \
-  HELM_SECRETS_BACKEND=sops \
+  HELM_SECRETS_BACKEND=vals \
   HELM_SECRETS_HELM_PATH=/usr/local/bin/helm \
   HELM_PLUGINS=/home/argocd/.local/share/helm/plugins/ \
   HELM_SECRETS_VALUES_ALLOW_SYMLINKS=false \
